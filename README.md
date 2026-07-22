@@ -1,24 +1,24 @@
-# ZeroClaw-Android: Run AI Agents 24/7 on Your Phone
+# ZeroClaw-Android: Your Phone Is Now an AI Server
 
 <img width="3616" height="1184" alt="Social" src="https://github.com/user-attachments/assets/90328733-6faf-4bc6-bdd6-8993d59d4680" />
 
-> Your old phone in a drawer is a better AI server than you think.
+> Your old phone in a drawer is a better AI server than you think. Unleash it.
 
-[![CI](https://github.com/Natfii/ZeroClaw-Android/actions/workflows/ci.yml/badge.svg)](https://github.com/Natfii/ZeroClaw-Android/actions/workflows/ci.yml)
+[![CI](https://github.com/ncore-core/zeroclaw-android/actions/workflows/ci.yml/badge.svg)](https://github.com/ncore-core/zeroclaw-android/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![API 28+](https://img.shields.io/badge/API-28%2B-brightgreen.svg)](https://developer.android.com/about/versions/pie)
-[![Latest Release](https://img.shields.io/github/v/release/Natfii/ZeroClaw-Android?include_prereleases&label=release)](https://github.com/Natfii/ZeroClaw-Android/releases)
+[![Latest Release](https://img.shields.io/github/v/release/ncore-core/zeroclaw-android?include_prereleases&label=release)](https://github.com/ncore-core/zeroclaw-android/releases)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF.svg?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Rust](https://img.shields.io/badge/Rust-stable-DEA584.svg?logo=rust&logoColor=white)](https://www.rust-lang.org)
-[![Providers](https://img.shields.io/badge/Providers-32%2B-blue.svg)](https://github.com/Natfii/ZeroClaw-Android#supported-providers)
+[![Providers](https://img.shields.io/badge/Providers-32%2B-blue.svg)](https://github.com/ncore-core/zeroclaw-android#supported-providers)
 
-ZeroClaw-Android turns your Android phone into an always-on AI agent host. Not a Termux hack. Not a WebView. Native Rust compiled to ARM. Connect to 32+ providers -- OpenAI, Claude, Gemini, Groq, DeepSeek, Ollama, LM Studio, vLLM, Novita, Telnyx, and more -- and run autonomous agents around the clock with encrypted API key storage (AES-256-GCM) and a battery-optimized foreground service. No server required. No cloud bills. Just your phone.
+ZeroClaw-Android turns your Android phone into an always-on AI agent host. No Termux hacks. No WebView wrappers. Native Rust compiled to ARM. Connect to 32+ providers -- OpenAI, Claude, Gemini, Groq, DeepSeek, Ollama, LM Studio, vLLM, Novita, Telnyx, and more -- and run autonomous agents around the clock with encrypted API key storage (AES-256-GCM) and a battery-optimized foreground service. No server required. No cloud bills. Just your phone.
 
 ## Quick Start
 
 Got an old phone? Give it a new job.
 
-1. **Download** the latest APK from [GitHub Releases](https://github.com/Natfii/ZeroClaw-Android/releases)
+1. **Download** the latest APK from [GitHub Releases](https://github.com/ncore-core/zeroclaw-android/releases)
 2. **Add a provider** -- paste your API key or point to a local Ollama instance
 3. **Create an agent** -- pick a model and configure its behavior
 4. **Tap Start** -- the daemon launches as a foreground service and runs until you stop it
@@ -26,6 +26,15 @@ Got an old phone? Give it a new job.
 The onboarding wizard walks you through all of this on first launch.
 
 ***Disclaimer: This app is a personal project not associated with the ZeroClaw Labs team. It might break.***
+
+## Why ZeroClaw?
+
+Most "AI on phone" projects are either:
+- **Termux scripts** that die when Android kills the process
+- **WebView wrappers** that leak memory and burn battery
+- **Cloud-dependent** apps that phone home every 30 seconds
+
+ZeroClaw-Android is none of those things. It runs a native Rust daemon compiled to ARM, manages its own foreground service lifecycle, and talks to AI providers directly. Your keys never leave the device unencrypted. Your agents survive reboot, task kills, and OEM battery optimizers.
 
 ## Features
 
@@ -115,10 +124,11 @@ Phones are designed to stay on. They handle push notifications, background servi
 
 **Best for:**
 
-- Routing calls to cloud providers (OpenAI, Claude, Gemini)
+- Routing calls to cloud providers (OpenAI, Claude, Gemini) at 2-5W
 - Running lightweight local models via Ollama on your network
 - IoT agent hubs that need always-on connectivity
 - Personal automation that runs while your laptop sleeps
+- **ncore-core workloads** that never sleep, never surrender
 
 **Not ideal for:**
 
@@ -138,6 +148,7 @@ Phones are designed to stay on. They handle push notifications, background servi
 | Local inference   | Limited (API routing)           | Strong (16-32GB unified memory) |
 | Setup time        | 5 minutes                       | 30+ minutes                     |
 | Also a phone      | Yes                             | No                              |
+| **ncore-core ready** | **Born for it**                | **Requires config**              |
 
 ## Security
 
@@ -234,7 +245,20 @@ Plus 28 additional functions for cost tracking, cron scheduling, events, health 
 | OpenClaw                                           | TypeScript-based AI agent platform | ZeroClaw is a Rust-native rewrite of the OpenClaw architecture |
 | ZeroClaw-Android                                   | This project                       | Android wrapper with native FFI                                |
 
-ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. Nader Dabit has called ZeroClaw "insanely fast" -- this project brings that speed to Android as an always-on service.
+ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. This project brings native-speed AI agents to Android -- always on, always ready, always encrypted.
+
+</details>
+
+<details>
+<summary>Ecosystem / Related Projects</summary>
+
+| Project                                            | Description                        | Relationship                                                   |
+| -------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------- |
+| [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | Rust-native AI agent framework     | Upstream core (git submodule)                                  |
+| OpenClaw                                           | TypeScript-based AI agent platform | ZeroClaw is a Rust-native rewrite of the OpenClaw architecture |
+| ZeroClaw-Android                                   | This project                       | Android wrapper with native FFI                                |
+
+ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. Born from the belief that your old phone deserves a second life as a ruthless AI server.
 
 </details>
 
@@ -258,7 +282,7 @@ ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. Nader 
 rustup target add aarch64-linux-android x86_64-linux-android
 
 # Clone with submodules
-git clone --recursive https://github.com/Natfii/ZeroClaw-Android.git
+git clone --recursive https://github.com/ncore-core/zeroclaw-android.git
 cd ZeroClaw-Android
 
 # Set environment (adjust paths for your system)
