@@ -250,19 +250,6 @@ ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. This p
 </details>
 
 <details>
-<summary>Ecosystem / Related Projects</summary>
-
-| Project                                            | Description                        | Relationship                                                   |
-| -------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------- |
-| [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | Rust-native AI agent framework     | Upstream core (git submodule)                                  |
-| OpenClaw                                           | TypeScript-based AI agent platform | ZeroClaw is a Rust-native rewrite of the OpenClaw architecture |
-| ZeroClaw-Android                                   | This project                       | Android wrapper with native FFI                                |
-
-ZeroClaw-Android wraps the upstream ZeroClaw engine without modification. Born from the belief that your old phone deserves a second life as a ruthless AI server.
-
-</details>
-
-<details>
 <summary>Building from Source</summary>
 
 ### Prerequisites
